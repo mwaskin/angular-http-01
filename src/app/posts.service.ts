@@ -36,4 +36,10 @@ export class PostsService {
         })
       );
   }
+
+  clearPosts() {
+    return this.http.delete(
+      'https://ng-http-01-bcdb6-default-rtdb.firebaseio.com/posts.json'
+    );
+  }
 }
